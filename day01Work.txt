@@ -1,3 +1,5 @@
+Day One Work
+
 1)
 create table locations
 (
@@ -59,6 +61,8 @@ insert into customers(customer_name,mobile_no,email_id,address,pincode)
 values(na,mo,em,addr,code);
 end %%
 delimiter ;
+
+
 
 call login('Sagar Patil','9604197756','sagarpatil@gmail.com','b1 Villa Kothrud Pune',411041);
 call login('Arjun Chaudhari','9612345678','arjun123@gmail.com','D1 Bunglow Koregaon Park Pune',411001);
