@@ -1,3 +1,5 @@
+Day02Work
+
 1)
 create table locations
 (
