@@ -1,3 +1,5 @@
+Day 2 
+
 1)
 create table locations
 (
