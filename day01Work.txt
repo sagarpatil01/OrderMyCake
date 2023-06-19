@@ -1,0 +1,67 @@
+1)
+create table locations
+(
+
+state_name varchar(15) not null,
+city_name varchar(15) not null,
+area varchar(20) not null,
+pincode int,
+constraint pk_lid primary key (pincode)
+
+);
+insert into locations
+values('Maharashtra','Pune','Kothrud',411041);
+insert into locations
+values('Maharashtra','Pune','Wakad',411021);
+insert into locations
+values('Maharashtra','Pune','Sangvi',411027);
+insert into locations
+values('Maharashtra','Mumbai','Andheri',400069);
+insert into locations
+values('Maharashtra','Mumbai','Dadar',400014);
+insert into locations
+values('Maharashtra','Mumbai','Malad',400097);
+insert into locations
+values('Maharashtra','Mumbai','Wadala',400031);
+insert into locations
+values('Maharashtra','Nashik','AshokNagar',422021);
+insert into locations
+values('Maharashtra','Nashik','Cidco',422029);
+insert into locations
+values('Maharashtra','Nashik','Gangapur',421027);
+insert into locations
+values('Maharashtra','Pune','Koregaon Park',411001);
+insert into locations
+values('Maharashtra','Pune','Sinhgad Road',411051);
+insert into locations
+values('Maharashtra','Pune','Deccan',411004);
+
+
+ 
+
+2)
+create table customers
+(
+  customer_id int auto_increment,
+  customer_name varchar(20) not null,
+  mobile_no varchar(13) unique not null,
+  email_id varchar(25) unique,
+  address varchar(100) not null,
+  pincode int,
+  constraint pk_customer_id primary key(customer_id),
+  constraint fk_pincode foreign key(pincode) references locations(pincode)
+);
+
+delimiter %%
+create procedure login(in na varchar(20),in mo varchar(13),in em varchar(20),in addr varchar(200),in code int)
+begin
+insert into customers(customer_name,mobile_no,email_id,address,pincode)
+values(na,mo,em,addr,code);
+end %%
+delimiter ;
+
+call login('Sagar Patil','9604197756','sagarpatil@gmail.com','b1 Villa Kothrud Pune',411041);
+call login('Arjun Chaudhari','9612345678','arjun123@gmail.com','D1 Bunglow Koregaon Park Pune',411001);
+call login('MAhesh Patil','968765432','maheshmp@gmail.com','a1 sneha vihar wadala mumbai ',400031);
+call login('Manish Samant','9681724356','manish321@gmail.com','JM road Srushti Apartment Cidco Nashik',422029);
+call login('Abhishek Upadhyay','8123456789','abhiup147@gmail.com','a4 eden garden sinhgad road pune ',411051);
