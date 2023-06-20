@@ -1,46 +1,40 @@
-<<<<<<< HEAD
-Day02Work
-=======
-Day One Work
->>>>>>> ffde738665cae89c572012c64e7c65882b23836f
-
 1)
 create table locations
 (
-
+id int,
 state_name varchar(15) not null,
 city_name varchar(15) not null,
 area varchar(20) not null,
 pincode int,
-constraint pk_lid primary key (pincode)
+constraint pk_id primary key (id)
 
-);
+); 
 insert into locations
-values('Maharashtra','Pune','Kothrud',411041);
+values(1,'Maharashtra','Pune','Kothrud',411041);
 insert into locations
-values('Maharashtra','Pune','Wakad',411021);
+values(2,'Maharashtra','Pune','Wakad',411021);
 insert into locations
-values('Maharashtra','Pune','Sangvi',411027);
+values(3,'Maharashtra','Pune','Sangvi',411027);
 insert into locations
-values('Maharashtra','Mumbai','Andheri',400069);
+values(4,'Maharashtra','Mumbai','Andheri',400069);
 insert into locations
-values('Maharashtra','Mumbai','Dadar',400014);
+values(5,'Maharashtra','Mumbai','Dadar',400014);
 insert into locations
-values('Maharashtra','Mumbai','Malad',400097);
+values(6,'Maharashtra','Mumbai','Malad',400097);
 insert into locations
-values('Maharashtra','Mumbai','Wadala',400031);
+values(7,'Maharashtra','Mumbai','Wadala',400031);
 insert into locations
-values('Maharashtra','Nashik','AshokNagar',422021);
+values(8,'Maharashtra','Nashik','AshokNagar',422021);
 insert into locations
-values('Maharashtra','Nashik','Cidco',422029);
+values(9,'Maharashtra','Nashik','Cidco',422029);
 insert into locations
-values('Maharashtra','Nashik','Gangapur',421027);
+values(10,'Maharashtra','Nashik','Gangapur',421027);
 insert into locations
-values('Maharashtra','Pune','Koregaon Park',411001);
+values(11,'Maharashtra','Pune','Koregaon Park',411001);
 insert into locations
-values('Maharashtra','Pune','Sinhgad Road',411051);
+values(12,'Maharashtra','Pune','Sinhgad Road',411051);
 insert into locations
-values('Maharashtra','Pune','Deccan',411004);
+values(13,'Maharashtra','Pune','Deccan',411004);
 
 
  
@@ -65,8 +59,6 @@ insert into customers(customer_name,mobile_no,email_id,address,pincode)
 values(na,mo,em,addr,code);
 end %%
 delimiter ;
-
-
 
 call login('Sagar Patil','9604197756','sagarpatil@gmail.com','b1 Villa Kothrud Pune',411041);
 call login('Arjun Chaudhari','9612345678','arjun123@gmail.com','D1 Bunglow Koregaon Park Pune',411001);
