@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-Day 2 
-=======
-<<<<<<< HEAD
-Day02Work
-=======
-Day One Work
->>>>>>> ffde738665cae89c572012c64e7c65882b23836f
->>>>>>> 3dcf4ff23a05155d2b369e9179e59d9a88f88ef7
-Hello1
+Hello
 1)
 create table locations
 (
